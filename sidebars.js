@@ -19,13 +19,13 @@ const sidebars = {
     {
       type: 'category',
       label: '指南',
-      items: ['quickstart'],
+      items: ['quickstart','dev-config'],
       collapsed: false,
     },    
     {
       type: 'category',
       label: '概念',
-      items: ['account'],
+      items: ['account','directory'],
       collapsed: false,
     },
   ],
