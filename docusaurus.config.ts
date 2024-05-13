@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Knockout',
-  tagline: 'AdminX是一套企业级业务系统解决方案,旨在帮助企业快速实现业务开发.',
+  tagline: 'Knockout是一套企业级业务系统解决方案,旨在帮助企业快速实现业务开发.',
   url: 'https://woocoos.github.io',
   baseUrl: '/knockout-doc',
   onBrokenLinks: 'throw',
@@ -64,7 +64,7 @@ const config: Config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'AdminX',
+        title: 'Knockout',
         logo: {
           alt: 'WooCoo Logo',
           src: 'img/logo.svg',
@@ -77,7 +77,7 @@ const config: Config = {
             label: 'Docs',
           },
           {
-            href: 'https://github.com/woocoos/adminx',
+            href: 'https://github.com/woocoos/knockout',
             label: 'GitHub',
             position: 'right',
           },
