@@ -1,11 +1,11 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+import {themes as prismThemes} from 'prism-react-renderer';
+import type {Config} from '@docusaurus/types';
+import type * as Preset from '@docusaurus/preset-classic';
 
-/** @type {import('@docusaurus/types').Config} */
-const config = {
+const config: Config = {
   title: 'AdminX',
   tagline: 'AdminX是一套企业级业务系统解决方案,旨在帮助企业快速实现业务开发.',
   url: 'https://woocoos.github.io',
@@ -116,10 +116,11 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Tsingsun Li. Built with Docusaurus.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
       },
-    }),
+    }) satisfies Preset.ThemeConfig,
 };
 
-module.exports = config;
+export default config;
+

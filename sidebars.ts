@@ -1,3 +1,5 @@
+import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
+
 /**
  * Creating a sidebar enables you to:
  - create an ordered group of docs
@@ -11,8 +13,7 @@
 
 // @ts-check
 
-/** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
-const sidebars = {
+const sidebars: SidebarsConfig = {
   // But you can create a sidebar manually
   md: [  
     'guide',
@@ -25,7 +26,19 @@ const sidebars = {
     {
       type: 'category',
       label: '概念',
-      items: ['account','directory'],
+      items: [ 
+        {
+          type: 'category',
+          label: '身份和访问管理',
+          link: {
+            type: 'doc',
+            id: 'iam/iam-index',
+          },
+          items: [
+            'iam/ko-identity','iam/directory','iam/access-control'
+          ],
+        },
+        ],
       collapsed: false,
     },
   ],
