@@ -8,9 +8,9 @@ id: dev-config
 
 ## 缓存
 
-adminx 使用了 ent 和 gengql 缓存,我们可以使用 entcache,根据实际情况确定缓存方式.
+Knockout 使用了 ent 和 gengql 缓存,我们可以使用 entcache,根据实际情况确定缓存方式.
 
-根据[entcache 文档](ariga.io/entcache)配置.
+根据[entcache 文档](https://github.com/woocoos/entcache)配置.
 
 - 基本 Http Request 缓存.
 
