@@ -6,10 +6,10 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'AdminX',
+  title: 'Knockout',
   tagline: 'AdminX是一套企业级业务系统解决方案,旨在帮助企业快速实现业务开发.',
   url: 'https://woocoos.github.io',
-  baseUrl: '/adminx',
+  baseUrl: '/knockout-doc',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
