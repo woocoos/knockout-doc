@@ -1,0 +1,84 @@
+# 快速开始
+
+## 安装
+
+### 下载
+
+下载Knockout项目：
+
+```shell
+git clone https://github.com/woocoos/knockout.git
+```
+
+### 安装工具包
+
+woco工具包： 提供了基于woocoo核心框架的命令行工具
+```shell
+go install github.com/tsingsun/woocoo/cmd/woco@main
+```
+
+kocli工具包： 提供了基于knockout开发框架的命令行工具
+
+```shell
+go install github.com/woocoos/kocli@main
+```
+
+> 正式发布后会将涉及的工具包版本化（TODO）
+
+### 准备数据库
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="MySQL" label="MySQL" default>
+    ```shell
+    docker run --name mysql --rm -p 3306:3306 -e MYSQL_ROOT_PASSWORD=pass -e MYSQL_DATABASE=portal -d mysql
+    ```
+  </TabItem>
+  <TabItem value="PostgreSQL" label="PostgreSQL">    
+    ```shell
+    docker run --name mysql --rm -p 5432:5432 -e POSTGRES_PASSWORD=pass -e POSTGRES_DB=portal -d postgres
+    ```
+  </TabItem>
+</Tabs>
+
+执行初始化脚本,脚本依赖woco工具包，如果还未安装，请执行以下脚本安装：
+
+```shell
+go install github.com/tsingsun/woocoo/cmd/woco@main
+```
+
+> 初始化脚本依赖Go环境, 可参考[Go环境安装](https://golang.org/doc/install)，并设置`go/bin`目录到PATH中
+
+
+在库根目录执行,一般情况下你会根据现存的数据库调整，因此除了支持命令行参数外，也支持的环境变量。
+
+安装脚本支持的环境变量：
+
+- DATABASE_URL： 数据库DSN格式，默认为`root:pass@tcp(localhost:3306)/portal`
+
+<Tabs>
+  <TabItem value="Windows" label="Windows" default>
+    ```powershell
+    . .\makefile.ps1
+    // powershell $env:DATABASE_URL="root:yourpassworld@tcp(localhost:3306)/portal"
+    db
+    ```
+  </TabItem>
+  <TabItem value="Uniux or MacOS" label="Uninux or Mac">
+    ```shell
+    // export DATABASE_URL="root:yourpassworld@tcp(localhost:3306)/portal"
+    make db
+    ```
+  </TabItem>
+</Tabs>
+
+在数据库安装过程中，如果在某一步中失败，需要手动执行失败子步骤及后续命令。子步骤如下：
+
+- initialize-schema：初始化数据库结构；
+- initialize-basedata: 初始化基础数据，如用户组织等；
+- initialize-qql-action: 初始化资源Graphql Actions数据
+- initialize-qql-menu: 初始化资源Graphql 菜单数据
+- initialize-app-policy： 初始化应用策略数据
+

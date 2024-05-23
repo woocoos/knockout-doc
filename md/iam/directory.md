@@ -29,6 +29,10 @@ id: directory
 
 ![export from account.drawio](./assets/account-directory.png)
 
+:::note
+对于组织域之间的资源隔离与租户环境一样是采用`X-Tenant-ID`做为请求头来隔离，该Key的命名也是较易理解的。
+:::
+
 ## 组织机构资源
 
 对于企业，组织机构资源是组织架构的描述,如企业组织架构,部门组织架构,岗位组织架构等。
