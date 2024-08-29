@@ -38,7 +38,8 @@ const sidebars: SidebarsConfig = {
             'iam/ko-identity','iam/directory','iam/access-control'
           ],
         },
-        ],
+        "file",
+      ],
       collapsed: false,
     },
   ],
