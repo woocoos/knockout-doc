@@ -42,6 +42,13 @@ const sidebars: SidebarsConfig = {
       ],
       collapsed: false,
     },
+    {
+      type: 'category',
+      label: '开发者工具',
+      items: [
+        'tools/kocli'
+      ]
+    },
   ],
 };
 
