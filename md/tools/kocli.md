@@ -3,7 +3,7 @@ id: kocli
 ---
 # kocli 命令
 
-kocli 是开发Knockout 应用的配套工具。
+kocli 是开发 Knockout 应用的配套工具。
 
 ## 安装
 
@@ -15,7 +15,7 @@ go install github.com/woocoos/kocli@latest
 
 ### kocli init
 
-该命令可快速初始化一个Kocketout项目.
+该命令可快速初始化一个Knockout项目.
 
 ```bash
 USAGE:
