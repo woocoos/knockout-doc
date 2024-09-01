@@ -46,7 +46,7 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: '开发者工具',
       items: [
-        'tools/kocli'
+        'tools/kocli','tools/lowcode'
       ]
     },
   ],
