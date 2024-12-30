@@ -44,9 +44,9 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: '开发者工具',
+      label: '开发者指南',
       items: [
-        'tools/kocli','tools/lowcode'
+        'dev/graphql','dev/tools/kocli','dev/tools/lowcode'
       ]
     },
   ],
