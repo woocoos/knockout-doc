@@ -8,6 +8,29 @@
 
 接下来我们重点讲下扩展的内容.
 
+## 事务
+
+事务的主要使用,可参考[Ent事务](https://entgo.io/docs/transactions).
+
+当需要额外控制事务时, 我们封装了事务相关的功能. 
+
+```go
+imourt "github.com/woocoos/knockout-go/ent/clientx"
+
+db := ent.NewClient()
+
+clientx.WithTx(ctx, 
+	func(ctx context.Context) (clientx.Transactor, error) {
+		return db.Tx(ctx) // db is *ent.Client
+		}, 
+	func(itx clientx.Transactor) error {
+			tx := itx.(*ent.Tx)
+			// do something with tx
+			return nil
+		}
+	)
+```
+
 ## Tenant组件
 
 Tenant组件提供了对多租户的数据库自动控制支持. 在schema使用如下

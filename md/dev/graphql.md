@@ -83,6 +83,17 @@ func main() {
     }
 }
 ```
+
+在GraphQL Server中引入扩展的中间件:
+```
+import "github.com/woocoos/knockout-go/pkg/middleware"
+
+gqlSrv := handler.NewDefaultServer(NewSchema(s.resolver))
+s.gqlSrv.AroundResponses(middleware.SimplePagination())
+```
+
+接下来就可以在页面中配合分页控制使用了.
+
 在GraphQL中,使用`p`参数和`first`参数进行分页,例如:
 
 ```
